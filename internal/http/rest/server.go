@@ -56,6 +56,8 @@ func NewServer(conf *config.Config, db *sqlx.DB) Server {
 func (s *Server) Start() {
 	url := fmt.Sprintf(":%v", s.conf.Server.Port)
 
+	s.initItemshopRouter()
+
 	// Create done channel to signal when the shutdown is complete
 	done := make(chan bool, 1)
 
