@@ -1,4 +1,4 @@
-// create server register routes method here
+// create server route register method here
 // use web framework Group instance and define routes with handler
 
 package server
